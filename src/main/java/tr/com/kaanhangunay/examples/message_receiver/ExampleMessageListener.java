@@ -18,5 +18,6 @@ public class ExampleMessageListener {
   public void onMessage(GenericApplicationEvent<ExampleMessage> message) {
     ExampleMessage msg = message.body();
     log.info(msg.getMessage());
+    throw new RuntimeException("Test Exception");
   }
 }
